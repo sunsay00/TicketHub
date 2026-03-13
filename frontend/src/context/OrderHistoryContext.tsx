@@ -54,7 +54,11 @@ interface OrderHistoryContextType {
 
 const OrderHistoryContext = createContext<OrderHistoryContextType | undefined>(undefined);
 
-export const OrderHistoryProvider = ({ children }: { children: ReactNode }) => {
+interface OrderHistoryProviderProps {
+  children: ReactNode;
+}
+
+export const OrderHistoryProvider = ({ children }: { children: OrderHistoryProviderProps }) => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -194,7 +198,7 @@ export const OrderHistoryProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useOrderHistory = () => {
+export const useOrderHistory = (): OrderHistoryContextType => {
   const context = useContext(OrderHistoryContext);
   if (!context) throw new Error('useOrderHistory must be used within OrderHistoryProvider');
   return context;

@@ -50,7 +50,7 @@ export default function CartScreen({ navigation }: CartScreenProps) {
     if (entry.selectionType === 'section') {
       const sel = entry.selection as { section: string; row?: string };
       return sel.row && sel.row !== '-' 
-        ? `${sel.section} ▯ Row ${sel.row}` 
+        ? `${sel.section} - Row ${sel.row}` 
         : sel.section;
     }
     return `Price: ${(entry.selection as { label: string }).label}`;
@@ -99,7 +99,7 @@ export default function CartScreen({ navigation }: CartScreenProps) {
       <View style={styles.header}>
         <View style={styles.headerRow}>
           {typeof navigation.goBack === 'function' && (
-            <TouchableOpacity onPress={() => navigation.goBack?.()} style={styles.backBtn}>
+            <TouchableOpacity onPress={() => navigation.goBack!()} style={styles.backBtn}>
               <Text style={styles.backText}>‹ Back</Text>
             </TouchableOpacity>
           )}
@@ -115,7 +115,7 @@ export default function CartScreen({ navigation }: CartScreenProps) {
             <View style={styles.cartItemContent}>
               <Text style={styles.eventTitle}>{item.event.title}</Text>
               <Text style={styles.ticketDetails}>{getEntryLabel(item)}</Text>
-              {!!item.ticketHolders?.length && (
+              {!item.ticketHolders?.length && (
                 <View style={styles.qtyRow}>
                   <TouchableOpacity
                     style={styles.qtyBtn}

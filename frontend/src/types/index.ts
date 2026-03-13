@@ -11,12 +11,6 @@ export interface Event {
   category: string;
 }
 
-export interface LotterySection {
-  id: string;
-  name: string;
-  type: string;
-}
-
 export interface LotteryPriceRange {
   id: string;
   label: string;

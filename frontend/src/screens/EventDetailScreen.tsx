@@ -207,7 +207,7 @@ export default function EventDetailScreen({ route, navigation }: EventDetailScre
                 <LotteryOption
                   key={option.id}
                   option={option}
-                  label={option.row === '-' ? option.section : `${option.section} ▯ Row ${option.row}`}
+                  label={option.row === '-' ? option.section : `${option.section} - Row ${option.row}`}
                   selected={selectedSectionRows.some((s) => s.id === option.id)}
                   onSelect={() => handleSelectSectionRow(option)}
                 />

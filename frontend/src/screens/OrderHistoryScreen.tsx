@@ -27,7 +27,7 @@ export default function OrderHistoryScreen({ navigation }: OrderHistoryScreenPro
     if (entry.selectionType === 'section') {
       const sel = entry.selection as { section: string; row?: string };
       return sel.row && sel.row !== '-'
-        ? `${sel.section} ｜ Row ${sel.row}`
+        ? `${sel.section} - Row ${sel.row}`
         : sel.section;
     }
     return `Price: ${(entry.selection as { label: string }).label}`;
@@ -173,7 +173,7 @@ export default function OrderHistoryScreen({ navigation }: OrderHistoryScreenPro
                   <View key={entry.id} style={styles.orderRow}>
                     <Text style={styles.orderDetail}>
                       {getEntryLabel(entry)}
-                      {hasWon ? ` 🎫 ${entry.wonCount}` : ` 🎫 ${entry.quantity}`}
+                      {hasWon ? ` x ${entry.wonCount}` : ` x ${entry.quantity}`}
                     </Text>
                   </View>
                 ))}

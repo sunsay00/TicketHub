@@ -11,7 +11,6 @@ interface ChanceEntry {
   chanceId: string;
 }
 
-// Helper: Expands quantity into individual chance entries for drawing
 function expandEntriesForDrawing(orders: Order[]): Record<string, ChanceEntry[]> {
   const byEvent: Record<string, ChanceEntry[]> = {};
   orders.forEach((order) => {
@@ -31,7 +30,6 @@ function expandEntriesForDrawing(orders: Order[]): Record<string, ChanceEntry[]>
   return byEvent;
 }
 
-// Helper: Logic for picking winners (minimum 2 or 20% of pool)
 function selectWinnersFromPool(byEvent: Record<string, ChanceEntry[]>, winnerCountPerEvent = 2): Set<string> {
   const winningChanceIds = new Set<string>();
   Object.values(byEvent).forEach((chances) => {
@@ -60,7 +58,6 @@ export const OrderHistoryProvider = ({ children }: { children: ReactNode }) => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Persistence: Load
   useEffect(() => {
     const loadOrders = async () => {
       try {
@@ -72,7 +69,6 @@ export const OrderHistoryProvider = ({ children }: { children: ReactNode }) => {
     loadOrders();
   }, []);
 
-  // Persistence: Save
   useEffect(() => {
     if (!isLoaded) return;
     const saveOrders = async () => {

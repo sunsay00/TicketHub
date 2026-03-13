@@ -149,14 +149,14 @@ export default function TicketsScreen() {
                   <Text style={styles.date}>
                     {formatDate(item.entry.event.date)} at {item.entry.event.time}
                   </Text>
-                  <View style={styles.seatInfo}>
+                  <Text style={styles.seatInfo}>
                     <Text style={styles.seatInfoLabel}>Section </Text>
                     <Text style={styles.seatInfoValue}>{section}</Text>
                     <Text style={styles.seatInfoLabel}> • Row </Text>
                     <Text style={styles.seatInfoValue}>{row}</Text>
                     <Text style={styles.seatInfoLabel}> • Seat{item.entry.seatAssignments && item.entry.seatAssignments.length > 1 ? 's' : ''} </Text>
                     <Text style={styles.seatInfoValue}>{seatDisplay}</Text>
-                  </View>
+                  </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.releaseButton} onPress={handleRelease}>
                   <Text style={styles.releaseButtonText}>Release</Text>

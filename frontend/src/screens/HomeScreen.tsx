@@ -13,7 +13,7 @@ import { colors, spacing, fontSizes, fontWeights, radii } from '../theme';
 
 interface HomeScreenProps {
   navigation: {
-    navigate: (screen: string, params?: { eventId: string }) => void;
+    navigate: (screen: string, params?: { eventId?: string }) => void;
   };
 }
 

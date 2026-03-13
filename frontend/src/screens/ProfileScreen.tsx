@@ -61,12 +61,12 @@ export default function ProfileScreen({ navigation }: ProfileScreenProps) {
         <View style={styles.card}>
           <View style={styles.avatar}>
             <Text style={styles.avatarText}>
-              {user?.name?.charAt(0)?.toUpperCase() || user?.email?.charAt(0)?.toUpperCase() || '?'}
+              {user!.name?.charAt(0)?.toUpperCase() || user!.email?.charAt(0)?.toUpperCase() || '?'}
             </Text>
           </View>
-          <Text style={styles.userName}>{user?.name || 'User'}</Text>
-          <Text style={styles.userEmail}>{user?.email}</Text>
-          {user?.phone ? (
+          <Text style={styles.userName}>{user!.name || 'User'}</Text>
+          <Text style={styles.userEmail}>{user!.email}</Text>
+          {user!.phone ? (
             <Text style={styles.userPhone}>{user!.phone}</Text>
           ) : null}
         </View>

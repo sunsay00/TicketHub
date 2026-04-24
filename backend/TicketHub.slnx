@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/aspire/">
+    <Project Path="TicketHub.AppHost/TicketHub.AppHost.csproj" />
+    <Project Path="TicketHub.ServiceDefaults/TicketHub.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="TicketHub.Api/TicketHub.Api.csproj" />
+    <Project Path="TicketHub.Application/TicketHub.Application.csproj" />
+    <Project Path="TicketHub.Db/TicketHub.Db.csproj" />
+    <Project Path="TicketHub.DbManager/TicketHub.DbManager.csproj" />
+    <Project Path="TicketHub.Infrastructure/TicketHub.Infrastructure.csproj" />
+    <Project Path="TicketHub.Shared/TicketHub.Shared.csproj" />
+  </Folder>
+</Solution>

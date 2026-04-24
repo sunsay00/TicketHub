@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   orderRow: {
-    marginBottom: spacing.sm,
+    marginBottom: spacing.lg,
   },
   orderEvent: {
     color: colors.text,

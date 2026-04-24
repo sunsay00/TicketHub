@@ -201,6 +201,8 @@ export const shared = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    zIndex: 10,
+    elevation: 10,
     padding: spacing.xxl,
     paddingBottom: 34, // Safe area for iOS
     backgroundColor: colors.background,

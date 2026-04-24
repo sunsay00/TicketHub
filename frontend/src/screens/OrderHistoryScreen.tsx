@@ -200,7 +200,10 @@ const styles = StyleSheet.create({
     color: colors.text,
   },
   list: shared.listBottom,
-  orderCard: shared.card,
+  orderCard: {
+    ...shared.card,
+    marginBottom: spacing.xl,
+  },
   orderHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -255,7 +258,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   orderRow: {
-    marginBottom: radii.sm,
+    marginBottom: spacing.sm,
   },
   orderEvent: {
     color: colors.text,

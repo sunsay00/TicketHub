@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
   cartItem: {
     ...shared.card,
     flexDirection: 'row',
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
   },
   cartItemContent: {
     flex: 1,

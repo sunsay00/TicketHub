@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderRadius: radii.xl,
     padding: spacing.xl,
-    marginBottom: spacing.lg,
+    marginBottom: spacing.xl,
     borderWidth: 1,
     borderColor: colors.borderLight,
     borderLeftWidth: 4,
